@@ -1,5 +1,7 @@
 import React from 'react'
 import { Footer } from '../components/Footer';
+import { Link } from 'react-router-dom'; // 👈 arriba en el archivo
+
 
 export const Home = () => {
  return (
@@ -10,25 +12,27 @@ export const Home = () => {
           <a href="index.html" className="brand">🍎 HuertoHogar</a>
         </div>
 
-        <nav className="menu">
-          <a href="index.html">HOME</a> |
-          <a href="productos.html">PRODUCTOS</a> |
-          <a href="categorias.html">CATEGORIAS</a> |
-          <a href="nosotros.html">NOSOTROS</a> |
-          <a href="blogs.html">BLOGS</a> |
-          <a href="contacto.html">CONTACTO</a>
-        </nav>
+       <nav className="menu">
+    <Link to="/">HOME</Link> |
+    <Link to="/productos">PRODUCTOS</Link> |
+    <Link to="/categorias">CATEGORIAS</Link> |
+    <Link to="/nosotros">NOSOTROS</Link> |
+    <Link to="/blogs">BLOGS</Link> |
+    <Link to="/contacto">CONTACTO</Link>
+  </nav>
 
-        <div className="topbar-right">
-          <a href="carrito.html" className="cart-link">🛒 Carrito (<span id="cart-count">0</span>)</a>
-          <div id="auth-area"></div>
-        </div>
+       <div className="topbar-right">
+    <Link to="/carrito" className="cart-link">
+      🛒 Carrito (<span id="cart-count">0</span>)
+    </Link>
+    <div id="auth-area"></div>
+  </div>
       </header>
 
       {/* Sub-barra de login */}
       <div className="login-bar">
-        <a href="login.html">Iniciar Sesión</a> |
-        <a href="registro.html">Registrarse</a>
+    <Link to="/login">Iniciar Sesión</Link> |
+  <Link to="/registro">Registrarse</Link>
       </div>
 
       <main>

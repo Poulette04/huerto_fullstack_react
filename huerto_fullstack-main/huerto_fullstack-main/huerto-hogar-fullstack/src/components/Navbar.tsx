@@ -4,9 +4,9 @@ export const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
         <div className="container">
-          <a className="navbar-brand fw-semibold" href="#">
-            AsesoríasTech
-          </a>
+          <NavLink to="/" className="navbar-brand fw-semibold">
+  AsesoríasTech
+</NavLink>
 
           <button
             className="navbar-toggler"
@@ -40,12 +40,12 @@ export const Navbar = () => {
             </ul>
 
             <div className="d-flex gap-2">
-              <a className="btn btn-light" href="#registrarse">
-                Registrarse
-              </a>
-              <a className="btn btn-light" href="#login">
-                Login
-              </a>
+              <NavLink to="/register" className="btn btn-light">
+  Registrarse
+</NavLink>
+              <NavLink to="/login" className="btn btn-light">
+  Login
+</NavLink>
             </div>
           </div>
         </div>
